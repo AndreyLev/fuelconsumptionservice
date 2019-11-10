@@ -2,7 +2,7 @@ package ru.rosbank.javaschool;
 
 public class Fuel {
 
-    final int millilitersInOneLiter = 1_000;
+    final static int millilitersInOneLiter = 1_000;
 
     private int currentVolume;
     private int consumptionPerOneHundredKm;

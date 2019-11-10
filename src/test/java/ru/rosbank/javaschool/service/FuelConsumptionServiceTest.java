@@ -60,7 +60,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenDifferenceInConditionIsAboveAverage()
+    void shouldCalculateWhenTheEnoughDistanceIsCloserToTheCeilingValue()
     {
 
         Fuel fuel = new Fuel(23, 7);
@@ -73,7 +73,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenDifferenceInConditionIsAverage()
+    void shouldCalculateWhenTheEnoughDistanceIsCloserToTheFloorValue()
     {
 
         Fuel fuel = new Fuel(24.5, 7);
@@ -86,7 +86,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenDifferenceInConditionBelowAverage()
+    void shouldCalculateWhenTheEnoughDistanceIsBetweenCeilingAndFloorValue()
     {
 
         Fuel fuel = new Fuel(26, 7);

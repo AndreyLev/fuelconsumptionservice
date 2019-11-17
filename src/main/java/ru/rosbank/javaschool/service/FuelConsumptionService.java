@@ -8,11 +8,15 @@ public class FuelConsumptionService {
     {
         int enoughDistance = 0;
 
-        if (fuel.getCurrentVolume() > 0 && fuel.getConsumptionPerOneHundredKm() > 0) {
-
-            enoughDistance = (int)Math.round((double)(fuel.getCurrentVolume()) / fuel.getConsumptionPerOneHundredKm());
-
+        if (fuel.getCurrentVolume() <= 0)  {
+            return 0;
         }
+
+        if (fuel.getConsumptionPerOneHundredKm() <= 0) {
+            return 0;
+        }
+
+        enoughDistance = (int)Math.round((double)(fuel.getCurrentVolume()) / fuel.getConsumptionPerOneHundredKm());
 
         return enoughDistance;
     }

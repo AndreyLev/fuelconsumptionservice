@@ -7,8 +7,7 @@ public class Fuel {
     private int currentVolume;
     private int consumptionPerOneHundredKm;
 
-    public Fuel(double currentVolume, double consumptionPerOneHundredKm)
-    {
+    public Fuel(double currentVolume, double consumptionPerOneHundredKm) {
         this.currentVolume = (int)(currentVolume * millilitersInOneLiter);
         this.consumptionPerOneHundredKm = (int)(consumptionPerOneHundredKm * millilitersInOneLiter);
     }

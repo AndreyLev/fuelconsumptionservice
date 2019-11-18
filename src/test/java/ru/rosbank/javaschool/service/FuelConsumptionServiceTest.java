@@ -8,8 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FuelConsumptionServiceTest {
 
     @Test
-    void shouldCalculateWhenFuelCurrentVolumeIsZero()
-    {
+    void shouldCalculateWhenFuelCurrentVolumeIsZero() {
 
         Fuel fuel = new Fuel(0, 56);
         FuelConsumptionService fuelConsumptionService = new FuelConsumptionService();
@@ -21,8 +20,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenFuelCurrentVolumeIsNegative()
-    {
+    void shouldCalculateWhenFuelCurrentVolumeIsNegative() {
 
         Fuel fuel = new Fuel(-23, 56);
         FuelConsumptionService fuelConsumptionService = new FuelConsumptionService();
@@ -34,8 +32,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenFuelConsumptionPerOneHundredKmIsNegative()
-    {
+    void shouldCalculateWhenFuelConsumptionPerOneHundredKmIsNegative() {
 
         Fuel fuel = new Fuel(23, -34);
         FuelConsumptionService fuelConsumptionService = new FuelConsumptionService();
@@ -47,8 +44,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenFuelConsumptionPerOneHundredKmIsZero()
-    {
+    void shouldCalculateWhenFuelConsumptionPerOneHundredKmIsZero() {
 
         Fuel fuel = new Fuel(23, 0);
         FuelConsumptionService fuelConsumptionService = new FuelConsumptionService();
@@ -60,8 +56,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenTheEnoughDistanceIsCloserToTheCeilingValue()
-    {
+    void shouldCalculateWhenTheEnoughDistanceIsCloserToTheCeilingValue() {
 
         Fuel fuel = new Fuel(23, 7);
         FuelConsumptionService fuelConsumptionService = new FuelConsumptionService();
@@ -73,8 +68,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenTheEnoughDistanceIsCloserToTheFloorValue()
-    {
+    void shouldCalculateWhenTheEnoughDistanceIsCloserToTheFloorValue() {
 
         Fuel fuel = new Fuel(24.5, 7);
         FuelConsumptionService fuelConsumptionService = new FuelConsumptionService();
@@ -86,8 +80,7 @@ class FuelConsumptionServiceTest {
     }
 
     @Test
-    void shouldCalculateWhenTheEnoughDistanceIsBetweenCeilingAndFloorValue()
-    {
+    void shouldCalculateWhenTheEnoughDistanceIsBetweenCeilingAndFloorValue() {
 
         Fuel fuel = new Fuel(26, 7);
         FuelConsumptionService fuelConsumptionService = new FuelConsumptionService();
